@@ -40,6 +40,6 @@ jobs:
                          docker pull ${{ vars.DOCKERHUB_USERNAME }}/woofi-nginx:${{ github.sha }}
                          docker run -d --name woofi-nginx  \
                          --network=woofi \
-                         -p 80:8080 \
+                         -p 80:80 \
                          -v ${HOME}/certs:/etc/nginx/certs \
                          ${{ vars.DOCKERHUB_USERNAME }}/woofi-nginx:${{ github.sha }}
