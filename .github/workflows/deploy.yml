@@ -41,5 +41,6 @@ jobs:
                          docker run -d --name woofi-nginx  \
                          --network=woofi \
                          -p 80:80 \
+                         -p 443:443 \
                          -v ${HOME}/certs:/etc/nginx/certs \
                          ${{ vars.DOCKERHUB_USERNAME }}/woofi-nginx:${{ github.sha }}
